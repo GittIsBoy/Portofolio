@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Professional portfolio of Sigit Wahab Albi - [Title Placeholder]"
+    />
+    <meta
+      name="keywords"
+      content="portfolio, developer, [keywords placeholder]"
+    />
+    <meta name="author" content="Sigit Wahab Albi" />
+    <meta name="theme-color" content="#0A0A0A" />
+    <script>
+      // Prevent flash of incorrect theme — runs before any rendering
+      (function () {
+        var theme = localStorage.getItem("portfolio-theme");
+        if (!theme) {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches
+            ? "dark"
+            : "light";
+        }
+        document.documentElement.setAttribute("data-theme", theme);
+        var metaTheme = document.querySelector('meta[name="theme-color"]');
+        if (metaTheme) {
+          metaTheme.setAttribute(
+            "content",
+            theme === "dark" ? "#0A0A0A" : "#FFFFFF",
+          );
+        }
+      })();
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sigit Wahab Albi - Portfolio" />
+    <meta property="og:description" content="[OG Description Placeholder]" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="[URL Placeholder]" />
+    <meta property="og:image" content="[OG Image Placeholder]" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Sigit Wahab Albi - Portfolio" />
+    <meta
+      name="twitter:description"
+      content="[Twitter Description Placeholder]"
+    />
+    <meta name="twitter:image" content="[Twitter Image Placeholder]" />
+
+    <title>Sigit Wahab Albi — Portfolio</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ==============================
+       NAVBAR
+  =============================== -->
+    <nav
+      class="navbar navbar-expand-lg fixed-top"
+      id="mainNav"
+      aria-label="Main navigation"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#home"
+          >Sigit<span class="accent-dot">.</span></a
+        >
+
+        <!-- Mobile: theme toggle + hamburger -->
+        <div class="d-flex align-items-center d-lg-none gap-2">
+          <button
+            id="themeToggleMobile"
+            class="theme-toggle"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <i class="bi bi-moon-stars theme-icon-active"></i>
+            <i class="bi bi-sun theme-icon-inactive"></i>
+          </button>
+          <button
+            class="navbar-toggler border-0"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#techstack">Tech Stack</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+          <!-- Desktop theme toggle -->
+          <button
+            id="themeToggleDesktop"
+            class="theme-toggle d-none d-lg-inline-flex"
+            type="button"
+            aria-label="Toggle theme"
+          >
+            <i class="bi bi-moon-stars theme-icon-active"></i>
+            <i class="bi bi-sun theme-icon-inactive"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ==============================
+       HERO BANNER
+  =============================== -->
+    <section id="home" class="hero-section d-flex align-items-center">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <!-- Left column -->
+          <div class="col-lg-6 hero-content" data-aos="fade-up">
+            <span class="badge hero-badge mb-3"
+              >Available for New Challenges</span
+            >
+            <h1 class="hero-title display-3 fw-bold mb-3">
+              Hi, I'm <span class="accent-text">Sigit Wahab Albi</span>
+            </h1>
+            <p class="hero-subtitle h4 fw-semibold text-secondary mb-3">
+              C# Programmer & Unity Developer
+            </p>
+            <p class="hero-description text-secondary mb-4">
+              I build simulation software, multiplayer systems, and enterprise
+              applications using Unity and C#.
+            </p>
+            <div class="hero-actions d-flex flex-wrap gap-3">
+              <a
+                href="#projects"
+                class="btn btn-primary btn-lg px-4 py-3 fw-semibold"
+              >
+                View My Work <i class="bi bi-arrow-right ms-2"></i>
+              </a>
+              <a
+                href="#contact"
+                class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold"
+              >
+                Get In Touch <i class="bi bi-envelope ms-2"></i>
+              </a>
+            </div>
+          </div>
+          <!-- Right column -->
+          <div
+            class="col-lg-6 text-center"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <div class="hero-visual position-relative d-inline-block">
+              <!-- Illustration placeholder -->
+              <div class="hero-illustration rounded-4">
+                <div class="code-editor">
+                  <div class="code-editor-header">
+                    <div class="code-editor-dots">
+                      <span class="code-editor-dot red"></span>
+                      <span class="code-editor-dot yellow"></span>
+                      <span class="code-editor-dot green"></span>
+                    </div>
+                    <span class="code-editor-title">Portfolio.cs</span>
+                    <span></span>
+                  </div>
+                  <div class="code-editor-body">
+                    <div class="code-line"><span class="keyword">using</span> Unity<span class="operator">.</span>Engine;</div>
+                    <div class="code-line"><span class="keyword">using</span> Mirror<span class="operator">.</span>Network;</div>
+                    <div class="code-line"></div>
+                    <div class="code-line"><span class="keyword">public class</span> <span class="type">Developer</span> : <span class="type">MonoBehaviour</span></div>
+                    <div class="code-line"><span class="bracket">{</span></div>
+                    <div class="code-line"><span class="indent"></span><span class="keyword">public string</span> <span class="variable">name</span> <span class="operator">=</span> <span class="string">"Sigit Wahab Albi"</span>;</div>
+                    <div class="code-line"><span class="indent"></span><span class="keyword">public string</span> <span class="variable">role</span> <span class="operator">=</span> <span class="string">"C# Programmer & Unity Dev"</span>;</div>
+                    <div class="code-line"><span class="indent"></span><span class="type">Simulation</span> <span class="method">Build</span>() <span class="operator">=></span> <span class="keyword">new</span> <span class="type">Simulation</span>();</div>
+                    <div class="code-line"><span class="indent"></span><span class="type">Multiplayer</span> <span class="method">Create</span>() <span class="operator">=></span> <span class="keyword">new</span> <span class="type">Multiplayer</span>();</div>
+                    <div class="code-line"><span class="bracket">}</span></div>
+                    <div class="code-line"><span class="comment">// Ready to build & deliver</span><span class="cursor-blink"></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+       ABOUT ME
+  =============================== -->
+    <section id="about" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle text-secondary">
+            Building software solutions that bridge simulation, logistics, and
+            real-world operations.
+          </p>
+        </div>
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6" data-aos="fade-up">
+            <p class="lead text-secondary">
+              I'm a C# Programmer and Unity Developer with experience developing
+              simulation software, multiplayer systems, and enterprise
+              applications. My work focuses on creating practical digital
+              solutions that support training, logistics, transportation, and
+              operational efficiency.
+            </p>
+            <p class="text-secondary">
+              Throughout my career, I have contributed to projects involving
+              Port Harbour, VTCV, ODOL (Over Dimension Over Load), Rekayasa
+              Lalulintas, Tiket passenger, API integrations, and real-time
+              multiplayer applications. I enjoy transforming complex operational
+              processes into reliable and user-friendly software solutions.
+            </p>
+          </div>
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="row g-3">
+              <div class="col-6">
+                <div class="stat-card text-center p-4 rounded-3">
+                  <span class="stat-number fw-bold display-5 accent-text"
+                    >6+</span
+                  >
+                  <p class="stat-label text-secondary mb-0">
+                    Projects Delivered
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card text-center p-4 rounded-3">
+                  <span class="stat-number fw-bold display-5 accent-text"
+                    >2+</span
+                  >
+                  <p class="stat-label text-secondary mb-0">Years Experience</p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card text-center p-4 rounded-3">
+                  <span class="stat-number fw-bold display-5 accent-text"
+                    >6+</span
+                  >
+                  <p class="stat-label text-secondary mb-0">
+                    Simulation Systems
+                  </p>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="stat-card text-center p-4 rounded-3">
+                  <span class="stat-number fw-bold display-5 accent-text"
+                    >100%</span
+                  >
+                  <p class="stat-label text-secondary mb-0">
+                    Client-Focused Solutions
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+       WORK EXPERIENCE
+  =============================== -->
+    <section id="experience" class="section-padding bg-secondary-bg">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">Work Experience</h2>
+          <p class="section-subtitle text-secondary">
+            Professional experience and contributions in simulation, and
+            enterprise software development.
+          </p>
+        </div>
+        <div class="timeline">
+          <!-- Experience item 1 — PT Savana Madani Teknologi -->
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-card card border rounded-3 p-4">
+              <div class="card-body">
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                  <span class="badge exp-badge">2025 — Present</span>
+                  <span class="text-secondary small">2026 — Present</span>
+                </div>
+                <h5 class="card-title fw-bold">Unity Developer</h5>
+                <h6 class="card-subtitle mb-3 text-secondary">
+                  PT Savana Madani Teknologi
+                </h6>
+                <p class="card-text text-secondary">
+                  Full-time Unity Developer responsible for designing and
+                  developing simulation software, enterprise applications, and
+                  operational training systems. Contributed to projects
+                  including Port Harbour, VTCV, ODOL (Over Dimension Over Load),
+                  Rekayasa Lalulintas, Tiket passenger, API integrations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+       FEATURED PROJECTS
+  =============================== -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">Featured Projects</h2>
+          <p class="section-subtitle text-secondary">
+            Selected projects showcasing practical software
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Project card 1 Port Harbour -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card card border rounded-3 h-100">
+              <div class="project-image-wrapper rounded-top">
+                <img
+                  src="https://drive.google.com/thumbnail?id=1moeBVjHcPxwJlJXLR535X4JhDrr_T7IZ&sz=w800"
+                  alt="Port Harbour project screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Port Harbour</h5>
+                <p class="card-text text-secondary flex-grow-1">
+                  Interactive 3D showcase application that presents buildings
+                  and facilities surrounding Palembang Port. Features include
+                  free camera navigation, interactive building selection,
+                  point-of-interest labels, and smooth camera transitions to
+                  help users efficiently explore and understand the port
+                  environment.
+                </p>
+                <div class="tech-tags mb-3">
+                  <span class="tech-tag">Unity</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">3D Visualization</span>
+                  <span class="tech-tag">Interactive Showcase</span>
+                  <span class="tech-tag">Camera System</span>
+                  <span class="tech-tag">UI/UX</span>
+                </div>
+                <div class="project-actions d-flex gap-2">
+                  <a
+                    href="https://drive.google.com/file/d/1Gwuh0d2HHFwdyR092WEvhap4ScT3Ffd5/view?usp=sharing"
+                    class="btn btn-sm btn-primary"
+                    ><i class="bi bi-box-arrow-up-right me-1"></i> Live</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project card 2 VTCV -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card card border rounded-3 h-100">
+              <div class="project-image-wrapper rounded-top">
+                <img
+                  src="https://drive.google.com/thumbnail?id=1VNiriRUt8g_IWdnC49CTojiX9w74CGG1&sz=w800"
+                  alt="VTCV project screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">VTCV</h5>
+                <p class="card-text text-secondary flex-grow-1">
+                  3D maritime traffic visualization platform designed to monitor
+                  and present cargo vessel movements across operational shipping
+                  routes. The application visualizes vessel navigation between
+                  Merak and Bakauheni as well as port activities in Palembang,
+                  including arrival, berthing, departure, and transit
+                  operations. Users can switch between multiple camera
+                  perspectives to observe vessel movements and port activities
+                  from different viewpoints.
+                </p>
+                <div class="tech-tags mb-3">
+                  <span class="tech-tag">Unity</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">3D Visualization</span>
+                  <span class="tech-tag">Maritime Simulation</span>
+                  <span class="tech-tag">Camera System</span>
+                  <span class="tech-tag">Monitoring</span>
+                </div>
+                <div class="project-actions d-flex gap-2">
+                  <a
+                    href="https://drive.google.com/file/d/1K7zTQ6xjsFyQzAHxf7Be8hRDL0BC-bTk/view?usp=sharing"
+                    class="btn btn-sm btn-primary"
+                    ><i class="bi bi-box-arrow-up-right me-1"></i> Live</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project card 3 ODOL (Over Dimension Over Load) -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card card border rounded-3 h-100">
+              <div class="project-image-wrapper rounded-top">
+                <img
+                  src="https://drive.google.com/thumbnail?id=18rzO1a3HVSBR-t48EyVPoPKhdLj0WwqH&sz=w800"
+                  alt="ODOL project screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">
+                  ODOL (Over Dimension Over Load)
+                </h5>
+                <p class="card-text text-secondary flex-grow-1">
+                  Operational training simulator that places users in a
+                  first-person inspection environment to evaluate vehicle
+                  compliance with over-dimension and overloading regulations
+                  before entering Merak Port. The application combines realistic
+                  inspection workflows, regulatory validation processes, and
+                  seamless web API integration to support training, assessment,
+                  and operational decision-making.
+                </p>
+                <div class="tech-tags mb-3">
+                  <span class="tech-tag">Unity</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">3D Visualization</span>
+                  <span class="tech-tag">First-Person Simulation</span>
+                  <span class="tech-tag">Training System</span>
+                  <span class="tech-tag">Inspection Workflow</span>
+                  <span class="tech-tag">REST API</span>
+                </div>
+                <div class="project-actions d-flex gap-2">
+                  <a
+                    href="https://drive.google.com/file/d/1OzG0NsBcY6IquktuqPbn2QIuGavHJULn/view?usp=sharing"
+                    class="btn btn-sm btn-primary"
+                    ><i class="bi bi-box-arrow-up-right me-1"></i> Live</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project card 4 Rekayasa Lalulintas -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card card border rounded-3 h-100">
+              <div class="project-image-wrapper rounded-top">
+                <img
+                  src="https://drive.google.com/thumbnail?id=1T5PUAzJgBAiPW8llzIhkr3GlYU9hkv0E&sz=w800"
+                  alt="Rekayasa Lalulintas project screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Rekayasa Lalulintas</h5>
+                <p class="card-text text-secondary flex-grow-1">
+                  Operational traffic management simulator developed to support
+                  congestion mitigation and traffic flow optimization around
+                  Merak Port. Users monitor and control vehicle releases from
+                  multiple rest areas, balancing traffic demand and roadway
+                  capacity to ensure smooth port access. The application
+                  integrates with web-based APIs to synchronize operational data
+                  and enhance simulation accuracy.
+                </p>
+                <div class="tech-tags mb-3">
+                  <span class="tech-tag">Unity</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">Traffic Simulation</span>
+                  <span class="tech-tag">Operational Planning</span>
+                  <span class="tech-tag">REST API</span>
+                  <span class="tech-tag">Decision Making</span>
+                </div>
+                <div class="project-actions d-flex gap-2">
+                  <a
+                    href="https://drive.google.com/file/d/10BXEZAc3YDXPqRkWGwVVPoixB8zRspxn/view?usp=sharing"
+                    class="btn btn-sm btn-primary"
+                    ><i class="bi bi-box-arrow-up-right me-1"></i> Live</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Project card 5 Ticket Passengers -->
+          <div class="col-md-6 col-lg-4" data-aos="fade-up">
+            <div class="project-card card border rounded-3 h-100">
+              <div class="project-image-wrapper rounded-top">
+                <img
+                  src="https://drive.google.com/thumbnail?id=1i7EFKDVQBhZUdn3Wg4CX9p49lF6skzUl&sz=w800"
+                  alt="Ticket Passengers project screenshot"
+                  class="project-image"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">Ticket Passengers</h5>
+                <p class="card-text text-secondary flex-grow-1">
+                  Ferry boarding and ticket validation platform designed to
+                  streamline passenger and vehicle verification processes before
+                  embarkation. The system integrates with web-based APIs to
+                  retrieve operational data, validate ticket information, and
+                  support efficient boarding workflows while ensuring compliance
+                  with transportation procedures.
+                </p>
+                <div class="tech-tags mb-3">
+                  <span class="tech-tag">Unity</span>
+                  <span class="tech-tag">C#</span>
+                  <span class="tech-tag">Ticket Validation</span>
+                  <span class="tech-tag">REST API</span>
+                  <span class="tech-tag">Decision Making</span>
+                </div>
+                <div class="project-actions d-flex gap-2">
+                  <a
+                    href="https://drive.google.com/file/d/1jTdkfH47-8dhO1JuQmhr4WjnwKptORtb/view?usp=sharing"
+                    class="btn btn-sm btn-primary"
+                    ><i class="bi bi-box-arrow-up-right me-1"></i> Live</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+       TECH STACK
+  =============================== -->
+    <section id="techstack" class="section-padding bg-secondary-bg">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">Tech Stack</h2>
+          <p class="section-subtitle text-secondary">
+            Technologies, tools, and frameworks I use to build simulation
+            software, multiplayer systems, and enterprise applications.
+          </p>
+        </div>
+        <div class="row g-4">
+          <!-- Category card 1 — Programming -->
+          <div class="col-md-6 col-lg-3" data-aos="fade-up">
+            <div class="stack-card card border rounded-3 p-4 h-100 text-center">
+              <div class="card-body">
+                <i
+                  class="bi bi-code-slash display-5 accent-text mb-3 d-block"
+                ></i>
+                <h5 class="card-title fw-bold mb-3">Programming</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                  <span class="tech-pill">C#</span>
+                  <span class="tech-pill">JavaScript</span>
+                  <span class="tech-pill">HTML5</span>
+                  <span class="tech-pill">CSS3</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Category card 2 — Unity Development -->
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="stack-card card border rounded-3 p-4 h-100 text-center">
+              <div class="card-body">
+                <i
+                  class="bi bi-controller display-5 accent-text mb-3 d-block"
+                ></i>
+                <h5 class="card-title fw-bold mb-3">Unity Development</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                  <span class="tech-pill">Unity</span>
+                  <span class="tech-pill">Mirror</span>
+                  <span class="tech-pill">Addressables</span>
+                  <span class="tech-pill">ScriptableObject</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Category card 3 — Backend & Integration -->
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="stack-card card border rounded-3 p-4 h-100 text-center">
+              <div class="card-body">
+                <i
+                  class="bi bi-hdd-network display-5 accent-text mb-3 d-block"
+                ></i>
+                <h5 class="card-title fw-bold mb-3">Backend & Integration</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                  <span class="tech-pill">REST API</span>
+                  <span class="tech-pill">Laravel</span>
+                  <span class="tech-pill">MySQL</span>
+                  <span class="tech-pill">JSON</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Category card 4 — Tools & Workflow -->
+          <div
+            class="col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="stack-card card border rounded-3 p-4 h-100 text-center">
+              <div class="card-body">
+                <i class="bi bi-tools display-5 accent-text mb-3 d-block"></i>
+                <h5 class="card-title fw-bold mb-3">Tools & Workflow</h5>
+                <div class="d-flex flex-wrap justify-content-center gap-2">
+                  <span class="tech-pill">Git</span>
+                  <span class="tech-pill">GitHub</span>
+                  <span class="tech-pill">Plastic SCM</span>
+                  <span class="tech-pill">Jira</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+       CONTACT
+  =============================== -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+          <h2 class="section-title">Get In Touch</h2>
+          <p class="section-subtitle text-secondary">
+            Open to professional opportunities, collaborations, freelance work,
+            and exciting software development projects.
+          </p>
+        </div>
+        <div class="row g-4 justify-content-center" data-aos="fade-up">
+          <!-- Email -->
+          <div class="col-md-6 col-lg-3">
+            <a
+              href="mailto:sigitwahaba@gmail.com"
+              class="contact-card card border rounded-3 p-4 h-100 text-center text-decoration-none"
+            >
+              <div class="card-body d-flex flex-column align-items-center">
+                <i
+                  class="bi bi-envelope-fill display-5 accent-text mb-3 d-block"
+                ></i>
+                <h5 class="card-title fw-bold">Email</h5>
+                <p class="card-text text-secondary small mb-3">
+                  Available for professional inquiries, project discussions, and
+                  collaboration opportunities.
+                </p>
+                <span class="btn btn-sm btn-outline-light mt-auto"
+                  >sigitwahaba@gmail.com</span
+                >
+              </div>
+            </a>
+          </div>
+          <!-- LinkedIn -->
+          <div class="col-md-6 col-lg-3">
+            <a
+              href="https://www.linkedin.com/in/sigit-wahab-albi-b3736b288"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card card border rounded-3 p-4 h-100 text-center text-decoration-none"
+            >
+              <div class="card-body d-flex flex-column align-items-center">
+                <i
+                  class="bi bi-linkedin display-5 accent-text mb-3 d-block"
+                ></i>
+                <h5 class="card-title fw-bold">LinkedIn</h5>
+                <p class="card-text text-secondary small mb-3">
+                  Connect with me professionally and explore my experience,
+                  projects, and career journey.
+                </p>
+                <span class="btn btn-sm btn-outline-light mt-auto"
+                  >View LinkedIn Profile</span
+                >
+              </div>
+            </a>
+          </div>
+          <!-- GitHub -->
+          <div class="col-md-6 col-lg-3">
+            <a
+              href="https://github.com/GittIsBoy"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card card border rounded-3 p-4 h-100 text-center text-decoration-none"
+            >
+              <div class="card-body d-flex flex-column align-items-center">
+                <i class="bi bi-github display-5 accent-text mb-3 d-block"></i>
+                <h5 class="card-title fw-bold">GitHub</h5>
+                <p class="card-text text-secondary small mb-3">
+                  Explore my repositories, development projects, and technical
+                  contributions.
+                </p>
+                <span class="btn btn-sm btn-outline-light mt-auto"
+                  >github.com/GittIsBoy</span
+                >
+              </div>
+            </a>
+          </div>
+          <!-- WhatsApp -->
+          <div class="col-md-6 col-lg-3">
+            <a
+              href="https://wa.me/6282258523573?text=Hi%20Sigit,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="contact-card card border rounded-3 p-4 h-100 text-center text-decoration-none"
+            >
+              <div class="card-body d-flex flex-column align-items-center">
+                <i
+                  class="bi bi-whatsapp display-5 accent-text mb-3 d-block"
+                ></i>
+                <h5 class="card-title fw-bold">WhatsApp</h5>
+                <p class="card-text text-secondary small mb-3">
+                  Let's discuss your project, collaboration opportunities, or
+                  software development needs directly.
+                </p>
+                <span class="btn btn-sm btn-outline-light mt-auto"
+                  >Chat via WhatsApp</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================
+       FOOTER
+  =============================== -->
+    <footer class="footer section-padding pt-0">
+      <div class="container">
+        <hr class="border-secondary mb-5" />
+        <div class="row align-items-center">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            <h5 class="fw-bold mb-1">Sigit Wahab Albi</h5>
+            <p class="text-secondary small mb-0">
+              C# Programmer & Unity Developer
+            </p>
+            <p class="text-secondary small mb-0 mt-1">
+              Building scalable software solutions, multiplayer systems, and
+              simulation applications.
+            </p>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div
+              class="social-links d-flex justify-content-center justify-content-md-end gap-3 mb-2"
+            >
+              <a
+                href="https://github.com/GittIsBoy"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="GitHub"
+              >
+                <i class="bi bi-github"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sigit-wahab-albi-b3736b288"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="LinkedIn"
+              >
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a
+                href="mailto:sigitwahaba@gmail.com"
+                class="social-link"
+                aria-label="Email"
+              >
+                <i class="bi bi-envelope-fill"></i>
+              </a>
+              <a
+                href="https://wa.me/6282258523573?text=Hi%20Sigit,%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="WhatsApp"
+              >
+                <i class="bi bi-whatsapp"></i>
+              </a>
+            </div>
+            <p class="text-secondary small mb-0">
+              &copy; 2026 Sigit Wahab Albi. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
